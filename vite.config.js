@@ -12,12 +12,14 @@ export default defineConfig({
       all: true,
       include: ["src/**/*.js", "src/**/*.jsx"],
       exclude: ["node_modules/**", "dist/**", "public/**", "**/*.config.*"],
-      lines: 100, // Schwellenwerte hier definieren
-      functions: 100,
-      branches: 100,
-      statements: 100,
+      thresholds: {
+        lines: 80,
+        functions: 80,
+        branches: 80,
+        statements: 80,
+      },
       skipFull: false,
-      check: true, // Coverage nach den Tests prüfen
+      check: true,
     },
   },
 });

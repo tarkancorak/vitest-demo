@@ -17,11 +17,11 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20 # oder die gewünschte Node-Version
+          node-version: 20
 
       - name: Install Dependencies
         run: npm install
 
       - name: Run Tests with Coverage Check
-        run: npm run test:coverage # oder yarn test:coverage
-        continue-on-error: false #Workflow bei error abbrechen
+        run: npm run test:coverage
+        continue-on-error: false

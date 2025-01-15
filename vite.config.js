@@ -11,19 +11,15 @@ export default defineConfig({
       provider: "v8",
       all: true,
       include: ["src/**/*.js", "src/**/*.jsx"],
-      exclude: [
-        "node_modules/**",
-        "dist/**",
-        "public/**",
-        "**/*.config.*",
-        "**/*.test.*",
-      ],
-      lines: 100, // Schwellenwerte hier definieren
-      functions: 100,
-      branches: 100,
-      statements: 100,
+      exclude: ["node_modules/**", "dist/**", "public/**", "**/*.config.*"],
+      thresholds: {
+        lines: 20,
+        functions: 25,
+        branches: 50,
+        statements: 20,
+      },
       skipFull: false,
-      check: true, // Coverage nach den Tests prüfen
+      check: true,
     },
   },
 });

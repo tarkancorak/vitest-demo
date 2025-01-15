@@ -11,13 +11,7 @@ export default defineConfig({
       provider: "v8",
       all: true,
       include: ["src/**/*.js", "src/**/*.jsx"],
-      exclude: [
-        "node_modules/**",
-        "dist/**",
-        "public/**",
-        "**/*.config.*",
-        "**/*.test.*",
-      ],
+      exclude: ["node_modules/**", "dist/**", "public/**", "**/*.config.*"],
       lines: 100, // Schwellenwerte hier definieren
       functions: 100,
       branches: 100,
